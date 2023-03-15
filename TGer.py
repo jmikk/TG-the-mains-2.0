@@ -17,8 +17,10 @@ def getItem(somthing):
     return somthing.firstChild.nodeValue
 
 
+nat = input("What nation should I check the bids for?")
+nat = nat.lower().replace(" ", "_")
 response = requests.get(
-    "https://www.nationstates.net/cgi-bin/api.cgi?q=cards+asksbids;nationname=9006",
+    f"https://www.nationstates.net/cgi-bin/api.cgi?q=cards+asksbids;nationname={nat}",
     headers={"User-Agent": USER},
 )
 print("time.sleeping")
