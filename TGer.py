@@ -63,7 +63,8 @@ for each in CARDIDs:
             main = "|" + main + "|"
             main = main.replace(puppet, mainer)
             main = main.replace("|", "")
-        # print(total.append(main))
+        # print()
+        total.append(main)
     OWNERs = set(total)
 
     print("Owners")
