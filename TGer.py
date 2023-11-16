@@ -48,8 +48,8 @@ for each in CARDIDs:
         listo.append(getItem(everything))
         OWNERs = set(listo)
     total = list()
-    with open("Pups.csv", "r") as f:
-        pups = f.readlines()
+    request3 = request.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vS4k61P0kprfp3kULkwGzhSNdUvSkZokt-Ckm_FTJ-OWBQcwoAgCYKmiSdw0V1tLsAit5DZVdA9Nb8L/pub?gid=733627866&single=true&output=csv")
+    pups = request3.text.split("\n")
     for main in OWNERs:
         for pup in pups:
             pup = pup.strip()
